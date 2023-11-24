@@ -21,7 +21,7 @@ on:
       if: github.event_name == 'workflow_dispatch'
       needs: Build
       environment: Load-Test
-        steps:
+      steps:
           - run: |
               echo "🧪 Testing..."
               sleep 15
@@ -33,7 +33,7 @@ on:
       name: Production
       url: https://writeabout.net
       if: github.event.inputs.environment == 'Production'
-        steps:
+      steps:
           - run: |
               echo "🚀 Step 1..."
               sleep 10
